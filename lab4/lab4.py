@@ -83,9 +83,9 @@ for k, d in enumerate(faces_1):
         k, d.left(), d.top(), d.right(), d.bottom()))  # малюємо рамку навколо знайденого обличчя
     shape = sp(image_1, d)
     win1.clear_overlay()
-    # win1.add_overlay(d)
-    # win1.add_overlay(shape)
-    # win1.wait_until_closed()
+    win1.add_overlay(d)
+    win1.add_overlay(shape)
+    win1.wait_until_closed()
 
     face_descriptor_1 = facerec.compute_face_descriptor(image_1, shape)
 
@@ -97,9 +97,9 @@ for k, d in enumerate(faces_2):
         k, d.left(), d.top(), d.right(), d.bottom()))  # малюємо рамку навколо знайденого обличчя
     shape = sp(image_2, d)
     win1.clear_overlay()
-    # win1.add_overlay(d)
-    # win1.add_overlay(shape)
-    # win1.wait_until_closed()
+    win1.add_overlay(d)
+    win1.add_overlay(shape)
+    win1.wait_until_closed()
 
     face_descriptor_2 = facerec.compute_face_descriptor(image_2, shape)
 
